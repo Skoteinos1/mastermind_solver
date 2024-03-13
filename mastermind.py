@@ -2,13 +2,12 @@ import itertools
 
 
 def remove_wrong_possibilities(guess):
-    global possible
-    options = possible
+    global remaining_options
 
-    for i in range(len(options)-1, -1, -1):
-        if evaluate(options[i], guess[0]) != guess[1]:
-            options.pop(i)
-    return options
+    for i in range(len(remaining_options)-1, -1, -1):
+        if evaluate(remaining_options[i], guess[0]) != guess[1]:
+            remaining_options.pop(i)
+    return remaining_options
 
 
 def evaluate(original, guess):
@@ -28,18 +27,16 @@ def evaluate(original, guess):
     
 
 stuff = ['pu', 'or', 'bl', 'ye', 're', 'br', 'gr', 'pi']
-possible = []
+remaining_options = []
 for subset in itertools.product(stuff, repeat=4):
-    possible.append(subset)
+    remaining_options.append(subset)
 
-# print(possible)
-# print(len(possible))
 
-# possible = remove_wrong_possibilities((('', '', '', ''), (0, 2)))
-possible = remove_wrong_possibilities((('pu', 'or', 'bl', 'ye'), (0, 1)))
-possible = remove_wrong_possibilities((('re', 'br', 'gr', 'pi'), (0, 3)))
-possible = remove_wrong_possibilities((('br', 'pi', 'pu', 'gr'), (2, 1)))
-possible = remove_wrong_possibilities((('br', 'pu', 're', 'gr'), (2, 1)))
-# possible = remove_wrong_possibilities((('br', 'ye', 'gr', 'ye'), (0, 1)))
+# remaining_options = remove_wrong_possibilities((('', '', '', ''), (0, 2)))
+remaining_options = remove_wrong_possibilities((('pu', 'or', 'bl', 'ye'), (0, 1)))
+remaining_options = remove_wrong_possibilities((('re', 'br', 'gr', 'pi'), (0, 3)))
+remaining_options = remove_wrong_possibilities((('br', 'pi', 'pu', 'gr'), (2, 1)))
+remaining_options = remove_wrong_possibilities((('br', 'pu', 're', 'gr'), (2, 1)))
+# remaining_options = remove_wrong_possibilities((('br', 'ye', 'gr', 'ye'), (0, 1)))
 
-print(possible)
+print(remaining_options)
