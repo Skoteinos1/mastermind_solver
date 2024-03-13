@@ -10,4 +10,6 @@ Steps which I used to solve game on picture:<br>
 remaining_options = remove_wrong_possibilities((('pu', 'or', 'bl', 'ye'), (0, 1)))<br>
 remaining_options = remove_wrong_possibilities((('re', 'br', 'gr', 'pi'), (0, 3)))<br>
 remaining_options = remove_wrong_possibilities((('br', 'pi', 'pu', 'gr'), (2, 1)))<br>
-remaining_options = remove_wrong_possibilities((('br', 'pu', 're', 'gr'), (2, 1)))
+remaining_options = remove_wrong_possibilities((('br', 'pu', 're', 'gr'), (2, 1)))<br>
+<br>
+![Picure of Mastermind Game](https://github.com/Skoteinos1/mastermind_solver/blob/main/masterm.png)
