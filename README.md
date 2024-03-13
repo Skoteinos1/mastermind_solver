@@ -7,9 +7,8 @@ It is very simple, it generates all possible combinations. if you enter your gue
 Repeat until game is solved.<br>
 <br>
 Steps which I used to solve game on picture:<br>
-remaining_options = remove_wrong_possibilities((('pu', 'or', 'bl', 'ye'), (0, 1)))<br>
-remaining_options = remove_wrong_possibilities((('re', 'br', 'gr', 'pi'), (0, 3)))<br>
-remaining_options = remove_wrong_possibilities((('br', 'pi', 'pu', 'gr'), (2, 1)))<br>
-remaining_options = remove_wrong_possibilities((('br', 'pu', 're', 'gr'), (2, 1)))<br>
+remaining_options = remove_wrong_possibilities((('pu', 'or', 'bl', 'ye'), (1, 1)))<br>
+remaining_options = remove_wrong_possibilities((('re', 'br', 'gr', 'pi'), (1, 0)))<br>
+remaining_options = remove_wrong_possibilities((('pu', 'gr', 'gr', 'or'), (0, 2)))<br>
 <br>
 ![Picure of Mastermind Game](https://github.com/Skoteinos1/mastermind_solver/blob/main/masterm.png)
